@@ -73,8 +73,10 @@ async function add(shop) {
 async function update(shop) {
    try {
       const shopToSave = {
+         _id: ObjectId.createFromHexString(shop._id),
          name: shop.name,
          price: shop.price,
+         reviews: shop.reviews,
       }
       const collection = await dbService.getCollection('shop')
       await collection.updateOne(

@@ -11,7 +11,7 @@ export const shopRoutes = express.Router()
 shopRoutes.get('/', log, getShops)
 shopRoutes.get('/:id', getShopById)
 shopRoutes.post('/', requireAdmin, addShop)
-shopRoutes.put('/:id', requireAdmin, updateShop)
+shopRoutes.put('/:id', updateShop)
 shopRoutes.delete('/:id', requireAdmin, removeShop)
 // router.delete('/:id', requireAuth, requireAdmin, removeShop)
 
